@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Safety App 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <br><br>
+    <form (ngSubmit)="saveDUID()">    
+<ion-item>
+  <ion-label>
+    Smart watch DUID
+  </ion-label>
+  <ion-input id="duid-input" placeholder="ABbnnhf24i231bF" [(ngModel)]="duidInput" name="duidInput"></ion-input>
+</ion-item>
+<br><br>
+<button ion-button block color="danger" type="submit" >Save</button>
+</form>
 </ion-content>
